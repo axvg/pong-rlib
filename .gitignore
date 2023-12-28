@@ -1,0 +1,14 @@
+# Object files
+*.o
+*.obj
+
+# Binary files
+*.bin
+*.exe
+*.out
+
+# Executable files
+main
+
+# Other files
+.DS_Store
