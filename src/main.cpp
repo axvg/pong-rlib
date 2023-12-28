@@ -91,6 +91,10 @@ int main(){
                 ball.y = GetScreenHeight()/2;
                 ball.speedX = 300;
                 ball.speedY = 300;
+                player1.y = GetScreenHeight()/2 - 50;
+                player2.y = GetScreenHeight()/2 - 50;
+                player1.x = 50;
+                player2.x = GetScreenWidth() - 50;
                 winnerStr = nullptr;
             }
         }
@@ -103,6 +107,10 @@ int main(){
         player2.Draw();
 
         if (winnerStr != nullptr){
+            // undraw ball and paddles
+            ball.x = -100;
+            player1.x = -100;
+            player2.x = -100;
             DrawText(winnerStr, GetScreenWidth()/2 - MeasureText(winnerStr, 40)/2, GetScreenHeight()/2 - 40, 40, WHITE);
             PlaySound(scoreSound);
         }
